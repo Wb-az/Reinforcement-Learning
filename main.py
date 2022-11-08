@@ -69,9 +69,6 @@ def warmup(transitions=10000, sac_agent=None, environment=None):
         # store transition
         sac_agent.store_memory(next_obs, w_action, obs, w_reward, terminated)
         obs = next_obs
-        if transition > sac_agent.batch_size:
-            sac_agent.update_parameters()
-
         if terminated or w_truncated:
             obs, _ = environment.reset()
 
