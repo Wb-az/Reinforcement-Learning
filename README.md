@@ -57,7 +57,8 @@ The actions available at each time step are:
 - left 
 - right
 - grab 
-After undertaking an action, the agent  gets a reward and transitions to a new state. Then the environment sends a signal indicating whether the game is over or not. 
+
+After taking an action, the agent gets a reward and transitions to a new state. Then the environment sends a signal indicating whether the game is over or not. 
 
 **<h4><div> 2.3 Observations</div></h4>**
 
