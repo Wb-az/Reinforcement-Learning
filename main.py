@@ -51,6 +51,8 @@ max_steps = 1600
 smooth = 10
 evaluate = True
 path_ = paths[1]
+plots_names = ['lunar', 'bipedal']
+plot_name =plots_names[1]
 
 
 def warmup(transitions=10000, sac_agent=None, environment=None):
@@ -174,7 +176,7 @@ if __name__ == '__main__':
     stats = Stats(length_episodes=steps_log, reward_episodes=rewards, episode_loss=loss_log)
 
     plot_episode_stats(stats, agent.lr_pol, episodes=episodes, smoothing_window=smooth,
-                       hideplot=False, name='lunar')
+                       hideplot=False, name=plot_name)
 
     if evaluate:
         evaluate_sac(agent.policy, env, eps=10, video_path=path_)
