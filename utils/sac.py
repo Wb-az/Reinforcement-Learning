@@ -33,13 +33,14 @@ class SoftActorCritic:
             lr_q (float): learning rate for the q and targets approximator
             lr_pol (float): learning rate for the policy
             batch_size (int) size of action samples
+            scale (int) a integer to scale the reward
             capacity (integer): the capacity of the memorry
             memory (method): the buffer to store the transitions-experience
             tau (float): soft value for the target update
             env (gym environment): the environment object
-            self.log_alpha: log of the temperature to be learnt
-            self.alpha: temperature to be learnt
-            self.target_entropy: target entropy of the temperature product of the env action space
+            log_alpha: log of the temperature to be learnt
+            alpha: temperature to be learnt
+            target_entropy: target entropy of the temperature product of the env action space
             action_space: the agent action space
             path: a string with the path tosave the models weigths
             loss_function: objective function to minimize
@@ -66,6 +67,7 @@ class SoftActorCritic:
         self.memory = ReplayMemory(self.capacity)
         self.tau = actor_kwargs['tau']
         self.env = actor_kwargs['env']
+        self.scale = actor_kwargs['r_scale']
         self.log_alpha = torch.zeros(1, requires_grad=True).to(device)
         self.alpha = self.log_alpha.detach().exp()
         self.target_entropy = -np.product(self.env.action_space.shape)
