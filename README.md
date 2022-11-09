@@ -94,8 +94,9 @@ The observation of the environment is a dictionary that contains
 
 <figure>
 	<img src="results/env_7x7.png" alt="Phonetic
-Env" height="230">(A)  <img src="results/env_comparison_50_ep.png" alt="Env Comp." height="250">(B)
-<figcaption  >  Figure 1. A Configurable phonetic environment size 7 x 7.  B.
+Env" height="200">(A)<img src="results/env_comparison_50_ep.png" alt="Env Comp." height="220">(B)
+
+<figcaption>  Figure 1. A Configurable phonetic environment size 7 x 7.  B.
 Policies comparison at different environment configurations after 50 epochs
 of training.
 </figcaption>
