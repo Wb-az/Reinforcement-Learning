@@ -1,5 +1,3 @@
-
-
 # Reinforcement Learning and Deep Reinforcement Learning
 
 
@@ -8,14 +6,13 @@
 This repository contains three reinforcement learning tasks. 
 1. A customised phonetic environment and arbitrary policies
 2. Build a Q-learning agent that trains on the phone environment
-3. Advance implementation of Deep Reinforcement Learning Soft Actor-Critic to train gym 
-   continuos environments: LunarLander-v2 and BipedalWalker-v3
+3. Advanced implementation of Deep Reinforcement Learning Soft Actor-Critic to train continuous gym environments: LunarLander-v2 and BipedalWalker-v3
 
-The scope and results of each task is sumarised below.
+The scope and results of each task are summarised below.
 
 **<h3><div>2. Task 1</h3></div>**
 
-For this task a a custom phonetic environment was build. The agent's mission is to identify words with one of 
+For this task, a custom phonetic environment was built. The agent's mission is to identify words with one of 
 the phonetic sounds of the IPA English alphabet:  **ʊ**, **ʌ**, **uː** whilst avoiding hitting 
 environment boundaries and movable obstacles. The agent was trained with three arbitrary policies: random, 
 biased, and combination. This task illustrates the learning process and the impact of environment design, including the size of the grid,
@@ -27,27 +24,27 @@ reward, the number of phonemes in the grid and moving obstacles in the agent's p
 The phoneme environment is a configurable N x M array of integers representing objects.
 All objects except the wall are placed randomly in the environment. Each object is represented as follows:
 
-- 0 : empty cell
-- 1 : moving obstacle
-- 2 : 'ʊ' word
-- 3 : 'ʌ' word
-- 4 : 'u:' word
-- 5 : Agent
-- 6 : Goal
-- 7 : Boundaries/walls
+- 0: empty cell
+- 1: moving obstacle
+- 2: 'ʊ' word
+- 3: 'ʌ' word
+- 4: 'u:' word
+- 5: Agent
+- 6: Goal
+- 7: Boundaries/walls
 
 The words are randomly from the phoneme list. The grid can be adapted to collect the three 
-sounds or any of their combinations by a minimal change in the rewards and policies functions. For a more advanced task each word with the same sound can be encoded with its own number. In this work the mission is to collect/learn the phonetic sound 'ʊ'.
+sounds or any of their combinations with a minimal change in the rewards and policies functions. For a more advanced task, each word with the same sound can be encoded with a number. In this work, the mission is to collect/learn the phonetic sound 'ʊ'.
 
-- The available area to placed objects is  total grid area - the boundary area
+- The available area to place objects is the total grid area - the boundary area
 
 a = M x N - 2 x (M + N) - 4
 
-- The total number of words on the grid and moveable are given by floor division of the empty 
-  cells (refer to noetbook in the associted documents for the full description)
+- The total number of words on the grid and moveable obstacles are given by floor division of the empty 
+  cells (refer to the notebook in the associated documents for the full description)
 
   
-- There is only one goal (G) and 1 learner (A)
+- There is only one goal (G) and one learner (A)
 
 **<h4><div> 2.2 Actions</div></h4>**
 
@@ -57,58 +54,55 @@ The actions available at each time step are:
 - left 
 - right
 - grab 
-
-After taking an action, the agent gets a reward and transitions to a new state. Then the environment sends a signal indicating whether the game is over or not. 
+After undertaking an action, the agent gets a reward and transitions to a new state. Then the environment sends a signal indicating whether the game is over or not. 
 
 **<h4><div> 2.3 Observations</div></h4>**
 
-The observation of the environment is a dictionary that containing
+The observation of the environment is a dictionary that contains
 - relative coordinates to all words in the grid
 - relative coordinates to the goal 
 - relative coordinates to the obstacles
 - a neighbourhood 3x3 array with the encoded values 
 - a counter indicating the words left
 - relative distance to the obstacles
-- current location of the agent
+- the current location of the agent
 
 
 **<h4><div> 2.4 Policies</div></h4>**
-- Goal oriented "Biased policy" - only grabs sounds when at the same position of the sound to a 
+- Goal-oriented "Biased policy" - only grabs sounds when at the same position of the sound to a 
   defined sound and 
   searches for the Goal.
-- Random policy - takes actions at random if not sound at the same location.
-- Combined policy - with  p = epsilon explores, otherwise follows the biased policy.
+- Random policy - takes actions randomly if not sound at the same location.
+- Combined policy - with p = epsilon explores, otherwise follows the biased policy.
 
 
 **<h4><div>2.5 Rewards</div></h4>**
 
 - -1 per each time step
 - -20 for hitting a moving obstacle 
-- -10 for grabbing in an empty cell or hitting a wasll
-- -10 for grabbing a word with 'ʊ' sound
+- -10 for grabbing in an empty cell or hitting a wall
+- -10 for grabbing a word with the 'ʊ' sound
 - -20 for grabbing ʌ_pos and uː
 - 100 if grabbing the correct sound
 
 -  reaching the goal if all ʊ were collected  area  x phonemes collected
--  reaching the goal and ʊ left area x (total phonemes - phonemes conected)
+-  reaching the goal and ʊ left area x (total phonemes - phonemes connected)
 
 #### Associated file
-1. ```t1_phoneme_environment.ipynb``` - the Jupyter notebook of with class environment, policies, comparison and visualisation of the stats.
+1. ```t1_phoneme_environment.ipynb``` - the Jupyter notebook with the class environment, policies, comparison and visualisation of the stats
 
 
-<!-- <figure>
+<figure>
 	<img src="results/env_7x7.png" alt="Phonetic
-Environment" height="230">(A) <img src="results/env_comparison_50_ep.png"
-alt="Environment Comparison"
-height="250">(B)
+Env" height="230">(A)  <img src="results/env_comparison_50_ep.png" alt="Env Comp." height="250">(B)
 <figcaption  >  Figure 1. A Configurable phonetic environment size 7 x 7.  B.
 Policies comparison at different environment configurations after 50 epochs
-training.
+of training.
 </figcaption>
-</figure> -->
+</figure>
 
 #### Associated file
-1. ```t1_phoneme_environment.ipynb``` - the Jupyter notebook of with class environment, policies, comparison and visualisation of the stats
+1. ```t1_phoneme_environment.ipynb``` - the Jupyter notebook with the class environment, policies, comparison and visualisation of the stats
 
 
 ### Task 2
@@ -116,8 +110,15 @@ training.
 In this task, the agent follows the Q-learning algorithm (off-policy algorithm) for the learning 
 process. The reward 
 per 
-episode remarkedly improves in comparison with task 1. The effect of the enviromment size, epsilon and alphas on the learning process was also compared.
+episode remarkedly improves in comparison with task 1. The effect of the environment size, epsilon and alphas on the learning process was also compared.
 
+<figure>
+	<img src="results/ql_comparison_30000_10x10.png" alt="Phonetic
+Env" height="230">  
+<figcaption  >  Figure 2. Comparison of the Q-agent performance in an environment size 10 x 
+10 with learning rates and expsilons of 0.1, 0.5 and 1.0 and 30,000 training epochs.
+</figcaption>
+</figure>
 
 #### Associated files
 1. ```phonemes.py``` – the class environment
@@ -132,6 +133,20 @@ The advanced algorithm, Soft Actor-Critic (SAC), combined policy and value-based
 - LunarLander-v2
 - BipedalWalker-v3
 
+The results are shown in Table 2 and Figure 3.
+
+Table 1. Training results of the continuos gym environments Lunar-Lander-v2 and BipedalWalker-v3 
+with the Soft Actor-Critic algorithm. The actor and critics had three hidden layers with 256 
+hidden unites.
+
+| Environment	     | Memory | Learning <br> rate	 |  tau  | reward <br> scale | Exploration |  Epochs  | Steps required <br> to learn |
+|:-----------------|:------:|:-------------------:|:-----:|:-----------------:|:-----------:|:--------:|:----------------------------:|
+| LunarLander-v2   |  1e6   |       0.0003        | 0.005 |         1         |    1000     | 476/500  |            142251            | 
+| LunarLander-v2.  |  1e6   |       0.0003        | 0.01  |         1         |    1000     | 387/500 |            111323            |
+| BipedalWalker-v3 |  1e5   |       0.0001        | 0.02  |         1         |    10000    | 463/600  |            507455            | 
+| BipedalWalker-v3 |  1e5   |       0.0001        | 0.01  |         1         |    10000    | 463/500  |            466914            |
+
+
 #### Associated files (six)
 1. ```utils``` – this folder contains four .py files:
 -	```networks_architecture.py``` which contains policy, value function and critic approximators
@@ -140,4 +155,5 @@ The advanced algorithm, Soft Actor-Critic (SAC), combined policy and value-based
 -	```plotting``` - a function to visualise the statistics from training
 
 2. ```main.py``` - trains and evaluate the performance of the agent 
-3. ```t3_sac_main.ipynb``` - the Jupyter notebook version of the main, designed to run on Google collab GPUs.
+3. ```t3_sac_main.ipynb``` - the Jupyter notebook version of the main, designed to run on Google collab GPUs
+
