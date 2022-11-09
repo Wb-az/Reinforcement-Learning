@@ -43,7 +43,7 @@ for e in ['lunar', 'bipedal']:
 env = envs[1]
 agent_params = {'gamma': 0.99, 'state_dim': env.observation_space.shape[0],
                 'actions_dim': env.action_space.shape[0], 'min': -20, 'max': 2, 'q_lr': 0.0001,
-                'lr': 0.0001, 'hidden_size': [256, 256, 256], 'batch_size': 256,
+                'lr': 0.0001, 'hidden_size': [256, 256, 256], 'batch_size': 256, 'r_scale': 1,
                 'memory_size': 1000000, 'tau': 0.02, 'env': env, 'path': params_dirs[1]}
 
 episodes = 600
@@ -93,9 +93,8 @@ def evaluate_sac(agent_policy, gym_env, eps=50, video_path=None):
         ep_reward = 0
         steps_ = 0
 
-        ep_path = video_path + '_ep_{}'.format(e + 1)
         video = VideoRecorder(gym_env, enabled=True, metadata={'step_id': e + 1},
-                              base_path=ep_path)
+                              path=f'{video_path}_ep_{ep + 1}.mp4')
 
         while not terminated:
             video.capture_frame()
