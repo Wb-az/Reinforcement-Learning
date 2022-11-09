@@ -92,15 +92,14 @@ The observation of the environment is a dictionary that contains
 1. ```t1_phoneme_environment.ipynb``` - the Jupyter notebook with the class environment, policies, comparison and visualisation of the stats
 
 
-<figure>
-	<img src="results/env_7x7.png" alt="Phonetic
-Env" height="200">(A)<img src="results/env_comparison_50_ep.png" alt="Env Comp." height="220">(B)
 
-<figcaption>  Figure 1. A Configurable phonetic environment size 7 x 7.  B.
+<img src="results/env_7x7.png" alt="Phonetic
+Env" height="200"/> __A__  <img src="results/env_comparison_50_ep.png" alt="Env Comp." height="220"/> __B__
+
+Figure 1. __A__ Configurable phonetic environment size 7 x 7.  __B__.
 Policies comparison at different environment configurations after 50 epochs
 of training.
-</figcaption>
-</figure>
+
 
 #### Associated file
 1. ```t1_phoneme_environment.ipynb``` - the Jupyter notebook with the class environment, policies, comparison and visualisation of the stats
@@ -113,9 +112,7 @@ process. The reward
 per 
 episode remarkedly improves in comparison with task 1. The effect of the environment size, epsilon and alphas on the learning process was also compared.
 
-<figure>
-	<img src="results/ql_comparison_30000_10x10.png" alt="Phonetic
-Env" height="230">  
+<figure> <img src="results/ql_comparison_30000_10x10.png" alt="Phonetic Env" height="250">  
 <figcaption  >  Figure 2. Comparison of the Q-agent performance in an environment size 10 x 
 10 with learning rates and expsilons of 0.1, 0.5 and 1.0 and 30,000 training epochs.
 </figcaption>
@@ -134,7 +131,7 @@ The advanced algorithm, Soft Actor-Critic (SAC), combined policy and value-based
 - LunarLander-v2
 - BipedalWalker-v3
 
-The results are shown in Table 2 and Figure 3.
+The best results are summarised in Table 1.
 
 Table 1. Training results of the continuos gym environments Lunar-Lander-v2 and BipedalWalker-v3 
 with the Soft Actor-Critic algorithm. The actor and critics had three hidden layers with 256 
