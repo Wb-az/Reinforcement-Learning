@@ -156,7 +156,7 @@ class SoftActorCritic:
             next_target_v = torch.min(next_target_q1_preds, next_target_q2_preds)
             next_target_v = (next_target_v - self.alpha * next_log_probs)
 
-            q_targets = rewards.view(-1) + ~dones.view(-1) * self.gamma * next_target_v
+            q_targets = self.scale * rewards.view(-1) + ~dones.view(-1) * self.gamma * next_target_v
 
             return q_targets
 
