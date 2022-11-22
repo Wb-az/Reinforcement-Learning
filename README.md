@@ -4,8 +4,8 @@
 **<h2><div>1. Introduction</h2></div>** 
 
 This repository contains three reinforcement learning tasks. 
-1. A customised phonetic environment and arbitrary policies
-2. Build a Q-learning agent that trains on the phone environment
+1. A customised phoneme environment and arbitrary policies
+2. Build a Q-learning agent that trains on the phoneme environment
 3. Advanced implementation of Deep Reinforcement Learning Soft Actor-Critic to train continuous gym environments: LunarLander-v2 and BipedalWalker-v3
 
 The scope and results of each task are summarised below.
