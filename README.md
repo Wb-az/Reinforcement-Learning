@@ -135,14 +135,19 @@ The best results are summarised in Table 1.
 
 Table 1. Training results of the continuos gym environments Lunar-Lander-v2 and BipedalWalker-v3 
 with the Soft Actor-Critic algorithm. The actor and critics had three hidden layers with 256 
-hidden unites.
+hidden units. The batch size was set to 256.
 
-| Environment	     | Memory | Learning <br> rate	 |  tau  | reward <br> scale | Exploration |  Epochs  | Steps required <br> to learn |
+| Environment	     | Memory | Learning rate	<br> actor / critic|  tau  | reward <br> scale | Exploration |  Epochs  | Steps required <br> to learn |
 |:-----------------|:------:|:-------------------:|:-----:|:-----------------:|:-----------:|:--------:|:----------------------------:|
-| LunarLander-v2   |  1e6   |       0.0003        | 0.005 |         1         |    1000     | 476/500  |            142251            | 
-| LunarLander-v2.  |  1e6   |       0.0003        | 0.01  |         1         |    1000     | 387/500 |            111323            |
+| LunarLander-v2   |  5e6   |  0.0005  / 0.0003   | 0.05  |         1         |    1000     | 500      |            142251            | 
+| LunarLander-v2.  |  5e5   |   0.0005  / 0.0003  | 0.01  |         0.5       |    1000     | 500      |            82458             |
 | BipedalWalker-v3 |  1e5   |       0.0001        | 0.02  |         1         |    10000    | 463/600  |            507455            | 
 | BipedalWalker-v3 |  1e5   |       0.0001        | 0.01  |         1         |    10000    | 463/500  |            466914            |
+
+
+
+<img src="plots/lunar/sum of rewards per episode_500_0.0003" alt="lunar_1" height="200"/> __A__  <img src="sum of rewards per episode_500_0.0003" alt="lunar" height="220"/> __B__
+
 
 
 #### Associated files (six)
