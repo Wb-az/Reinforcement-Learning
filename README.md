@@ -137,16 +137,17 @@ Table 1. Training results of the continuos gym environments Lunar-Lander-v2 and 
 with the Soft Actor-Critic algorithm. The actor and critics had three hidden layers with 256 
 hidden units. The batch size was set to 256.
 
-| Environment	     | Memory | Learning rate	<br> actor / critic|  tau  | reward <br> scale | Exploration |  Epochs  | Steps required <br> to learn |
-|:-----------------|:------:|:-------------------:|:-----:|:-----------------:|:-----------:|:--------:|:----------------------------:|
-| LunarLander-v2   |  5e6   |  0.0005  / 0.0003   | 0.05  |         1         |    1000     | 500      |            142251            | 
-| LunarLander-v2.  |  5e5   |   0.0005  / 0.0003  | 0.01  |         0.5       |    1000     | 500      |            82458             |
-| BipedalWalker-v3 |  1e5   |       0.0001        | 0.02  |         1         |    10000    | 463/600  |            507455            | 
-| BipedalWalker-v3 |  1e5   |       0.0001        | 0.01  |         1         |    10000    | 463/500  |            466914            |
+| Environment	     | Memory | Learning rate	<br> actor / critic|  tau  | reward <br> scale | Exploration |  Epochs  | steps<br> to learn |
+|:-----------------|:------:|:------------------:|:-----:|:-----------------:|:-----------:|:--------:|:----------------------------:|
+| LunarLander-v2   |  5e5   |   0.0003 / 0.0003  | 0.005 |         1         |    1000     | 500      |            104877            | 
+| LunarLander-v2   |  5e5   |   0.0005 / 0.0003  | 0.01  |         0.5       |    1000     | 500      |            82458             |
+| LunarLander-v2   |  5e5   |   0.0005 / 0.0003  | 0.05  |         1         |    1000     | 500      |            82458             |
+<!--- | BipedalWalker-v3 |  1e5   |   0.0001 / 0.0001  | 0.02  |         1         |    10000    | 600      |            507455            | 
+| BipedalWalker-v3 |  1e5   |   0.00005/ 0.0001  | 0.01  |         1         |    10000    | 500      |            466914            |
 
 
 
-<img src="plots/lunar/sum of rewards per episode_500_0.0003" alt="lunar_1" height="200"/> __A__  <img src="sum of rewards per episode_500_0.0003" alt="lunar" height="220"/> __B__
+<img src="results/exp01_episode_500_0.0003.png" alt="exp_01" height="200"/> __A__  <img src="results/exp02_episode_500_0.0003.png" alt="exp_02" height="220"/> __B__ <img src="results/exp03_episode_500_0.0005.png" alt="exp_03" height="200"/> --->
 
 
 
