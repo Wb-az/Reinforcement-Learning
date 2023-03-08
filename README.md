@@ -150,6 +150,8 @@ hidden units. The batch size was set to 256.
 <img src="results/exp01_episode_500_0.0003.png" alt="exp_01" height="200"/> __A__  <img src="results/exp02_episode_500_0.0003.png" alt="exp_02" height="220"/> __B__ <img src="results/exp03_episode_500_0.0005.png" alt="exp_03" height="200"/> --->
 
 
+![lunar ](results/lunar_ep_500.mp4)
+
 
 #### Associated files (six)
 1. ```utils``` – this folder contains four .py files:
@@ -159,8 +161,9 @@ hidden units. The batch size was set to 256.
 -	```plotting``` - a function to visualise the statistics from training
 
 2. ```main.py``` - trains and evaluate the performance of the agent 
-3. ```t3_sac_main.ipynb``` - the Jupyter notebook version of the main, designed to run on Google collab GPUs
+3. ```t3_sac_main.ipynb``` - the Jupyter notebook version of the main, designed to run on Google collab GPUs 
 
-<video src="video/lunar_ep_500.mp4"  style="max-width: 730px;">
-</video>
+
+
+
 
