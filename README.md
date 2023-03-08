@@ -161,3 +161,6 @@ hidden units. The batch size was set to 256.
 2. ```main.py``` - trains and evaluate the performance of the agent 
 3. ```t3_sac_main.ipynb``` - the Jupyter notebook version of the main, designed to run on Google collab GPUs
 
+<video src="video/lunar_ep_500.mp4"  style="max-width: 730px;">
+</video>
+
