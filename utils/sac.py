@@ -68,7 +68,7 @@ class SoftActorCritic:
         self.tau = actor_kwargs['tau']
         self.env = actor_kwargs['env']
         self.scale = actor_kwargs['r_scale']
-        self.log_alpha = torch.zeros(1, requires_grad=True).to(device)
+        self.log_alpha = torch.zeros(1, requires_grad=True, device=device)
         self.alpha = self.log_alpha.detach().exp()
         self.target_entropy = -np.product(self.env.action_space.shape)
         self.action_space = actor_kwargs['env'].action_space
