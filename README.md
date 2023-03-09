@@ -145,17 +145,26 @@ hidden units. The batch size was set to 256.
 | LunarLander-v2   |  5e5   |   0.0005 / 0.0003  | 0.05  |         1         |    1000     | 500      |            82458             |
 <!--- | BipedalWalker-v3 |  5e5   |   0.0001 / 0.0001  | 0.01  |         1   |    1000    | 600      |       348007            | 
 | BipedalWalker-v3 |  1e5   |   0.0001/ 0.00005  | 0.01  |         1         |    1000    | 500      |            654222            |
-| BipedalWalker-v3 |  1e5   |   0.0001/ 0.0002  | 0.01  |         1          |    1000    | 500      |            654222            |
+| BipedalWalker-v3 |  1e5   |   0.0001/ 0.0002  | 0.01  |         1          |    1000    | 700      |                       |
 
 
 
 
 <img src="results/exp01_episode_500_0.0003.png" alt="exp_01" height="200"/> __A__  <img src="results/exp02_episode_500_0.0003.png" alt="exp_02" height="220"/> __B__ <img src="results/exp03_episode_500_0.0005.png" alt="exp_03" height="200"/> --->
 
+<img src="results/exp01b_episode_500_0.0003.png" alt="exp_01b" height="200"/> __A__  <img src="results/exp02b_episode_500_0.0003.png" alt="exp_02" height="220"/> __B__ <img src="results/exp03b_episode_500_0.0005.png" alt="exp_03" height="200"/> --->
 
 
-<video src="https://user-images.githubusercontent.com/120340996/224035224-b9781120-5825-4484-8113-3957487f448c.mp4" controls="controls" width=100p>
-</video>
+
+
+<video src="https://user-images.githubusercontent.com/120340996/224035224-b9781120-5825-4484-8113-3957487f448c.mp4" controls="controls" width=100p></video>
+LunarLander-v2 Continuos
+
+
+
+<video src="https://user-images.githubusercontent.com/120340996/224164231-f8d96d4d-e099-4ae1-9a8f-14ec0e77523a.mp4" controls="controls" width=100p></video>
+BipedalWalker-v3 Continuos environment is finish after 100 consecutive episodes with an average reward >= 300.
+
 
 
 #### Associated files (six)
