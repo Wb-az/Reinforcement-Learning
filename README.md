@@ -56,6 +56,7 @@ The actions available at each time step are:
 - grab 
 After undertaking an action, the agent gets a reward and transitions to a new state. Then the environment sends a signal indicating whether the game is over or not. 
 
+
 **<h4><div> 2.3 Observations</div></h4>**
 
 The observation of the environment is a dictionary that contains
@@ -142,15 +143,19 @@ hidden units. The batch size was set to 256.
 | LunarLander-v2   |  5e5   |   0.0003 / 0.0003  | 0.005 |         1         |    1000     | 500      |            104877            | 
 | LunarLander-v2   |  5e5   |   0.0005 / 0.0003  | 0.01  |         0.5       |    1000     | 500      |            82458             |
 | LunarLander-v2   |  5e5   |   0.0005 / 0.0003  | 0.05  |         1         |    1000     | 500      |            82458             |
-<!--- | BipedalWalker-v3 |  1e5   |   0.0001 / 0.0001  | 0.02  |         1         |    10000    | 600      |            507455            | 
-| BipedalWalker-v3 |  1e5   |   0.00005/ 0.0001  | 0.01  |         1         |    10000    | 500      |            466914            |
+<!--- | BipedalWalker-v3 |  5e5   |   0.0001 / 0.0001  | 0.01  |         1   |    1000    | 600      |       348007            | 
+| BipedalWalker-v3 |  1e5   |   0.0001/ 0.00005  | 0.01  |         1         |    1000    | 500      |            654222            |
+| BipedalWalker-v3 |  1e5   |   0.0001/ 0.0002  | 0.01  |         1          |    1000    | 500      |            654222            |
+
 
 
 
 <img src="results/exp01_episode_500_0.0003.png" alt="exp_01" height="200"/> __A__  <img src="results/exp02_episode_500_0.0003.png" alt="exp_02" height="220"/> __B__ <img src="results/exp03_episode_500_0.0005.png" alt="exp_03" height="200"/> --->
 
 
-![lunar ](results/lunar_ep_500.mp4)
+
+<video src="https://user-images.githubusercontent.com/120340996/224035224-b9781120-5825-4484-8113-3957487f448c.mp4" controls="controls" width=100p>
+</video>
 
 
 #### Associated files (six)
