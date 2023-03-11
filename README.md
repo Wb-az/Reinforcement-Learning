@@ -155,19 +155,17 @@ hidden units. The batch size was set to 256.
 <sup>2</sup> Solved the envriroment  with a total of 617406 steps
 
 
-
-
-<img src="results/lunar/sum of rewards per episode_500_0.0003.png" alt="exp_01" height="200"/> __A__  <img src="results/lunar02/sum of rewards per episode_500_0.0003.png" alt="exp_02" height="220"/> __B__ <img src="results/lunar03/sum of rewards per episode_500_0.0005" alt="exp_03" height="200"/> __C__ 
+<img src="results/lunar/sum of rewards per episode_500_0.0003.png" alt="exp_01" width="325"/>__A__<img src="results/lunar02/sum of rewards per episode_500_0.0003.png" alt="exp_02" width="325"/>__B__<img src="results/lunar03/sum of rewards per episode_500_0.0005.png" alt="exp_03" width="325"/>__C__
 
   <p align="center">
-      LunarLander-v2 Continuous training graphs. A. Experiment Exp-01. B Experiment Exp-02 . C Experiment Exp-03.
+      Figure 3. LunarLander-v2 Continuous training graphs. A. Experiment Exp-01. B Experiment Exp-02 . C Experiment Exp-03.
   </p>
 
-<img src="results/bipedal/sum of rewards per episode_600_0.0001.png" alt="exp_04" height="200"/> __A__  <img src="results/bipedal02/sum of rewards per episode_600_0.0001.png" alt="exp_05" height="220"/> __B__ <img src="results/bipedal03/sum of rewards per episode_700_0.0002.png" alt="exp_06" height="200"/> __C__ 
+<img src="results/bipedal/sum of rewards per episode_600_0.0001.png" alt="exp_04" width="325"/>__A__<img src="results/bipedal02/sum of rewards per episode_600_0.0001.png" alt="exp_05" width="325"/>__B__<img src="results/bipedal03/sum of rewards per episode_700_0.0002.png" alt="exp_06" width="325"/>__C__ 
 
-  <p align="center">
-      BipedalWalker-v3 Continuous training graphs. A. Experiment Exp-04. B Experiment Exp-05 . C Experiment Exp-06.
-  </p>
+ <p align="center">
+      Figure 4. BipedalWalker-v3 Continuous training graphs. A. Experiment Exp-04. B Experiment Exp-05 . C Experiment Exp-06.
+ </p>
 
 
 <video src="https://user-images.githubusercontent.com/120340996/224035224-b9781120-5825-4484-8113-3957487f448c.mp4" controls="controls" width=100p></video>
