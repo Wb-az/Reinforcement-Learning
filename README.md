@@ -157,13 +157,13 @@ hidden units. The batch size was set to 256.
 
 
 
-<img src="results/lunar/sum of rewards per episode_500_0.0003.png" alt="exp_01" height="200"/> __A__  <img src="results/lunar02/sum of rewards per episode_500_0.0003.png" alt="exp_02" height="220"/> __B__ <img src="results/lunar03/sum of rewards per episode_500_0.0005" alt="exp_03" height="200"/> 
+<img src="results/lunar/sum of rewards per episode_500_0.0003.png" alt="exp_01" height="200"/> __A__  <img src="results/lunar02/sum of rewards per episode_500_0.0003.png" alt="exp_02" height="220"/> __B__ <img src="results/lunar03/sum of rewards per episode_500_0.0005" alt="exp_03" height="200"/> __C__ 
 
   <p align="center">
       LunarLander-v2 Continuous training graphs. A. Experiment Exp-01. B Experiment Exp-02 . C Experiment Exp-03.
   </p>
 
-<img src="results/bipedal/sum of rewards per episode_600_0.0001.png" alt="exp_04" height="200"/> __A__  <img src="results/bipedal02/sum of rewards per episode_600_0.0001.png" alt="exp_05" height="220"/> __B__ <img src="results/bipedal03/sum of rewards per episode_700_0.0002.png" alt="exp_06" height="200"/> --->
+<img src="results/bipedal/sum of rewards per episode_600_0.0001.png" alt="exp_04" height="200"/> __A__  <img src="results/bipedal02/sum of rewards per episode_600_0.0001.png" alt="exp_05" height="220"/> __B__ <img src="results/bipedal03/sum of rewards per episode_700_0.0002.png" alt="exp_06" height="200"/> __C__ 
 
   <p align="center">
       BipedalWalker-v3 Continuous training graphs. A. Experiment Exp-04. B Experiment Exp-05 . C Experiment Exp-06.
