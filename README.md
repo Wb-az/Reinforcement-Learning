@@ -167,13 +167,14 @@ hidden units. The batch size was set to 256.
       Figure 4. BipedalWalker-v3 Continuous training graphs. A. Experiment Exp-04. B Experiment Exp-05 . C Experiment Exp-06.
  </p>
 
-
-<video src="https://user-images.githubusercontent.com/120340996/224035224-b9781120-5825-4484-8113-3957487f448c.mp4" controls="controls" width=100p></video>
-LunarLander-v2 Continuos
+https://user-images.githubusercontent.com/120340996/224035224-b9781120-5825-4484-8113-3957487f448c.mp4
 
 
 
-<video src="https://user-images.githubusercontent.com/120340996/224164231-f8d96d4d-e099-4ae1-9a8f-14ec0e77523a.mp4" controls="controls" width=100p></video>
+https://github.com/Wb-az/Reinforcement-Learning/assets/120340996/a1a4970d-bf76-445a-a70c-ae7b81d28e35
+
+
+
 
 
 
