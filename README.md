@@ -144,15 +144,15 @@ hidden units. The batch size was set to 256.
 |Exp   | Environment	    | Memory | Learning rate	<br> actor / critic|  tau  | reward <br> scale | Exploration |  Epochs  | steps<br> to learn |
 |:----:|:-----------------|:------:|:------------------:|:-----:|:-----------------:|:-----------:|:--------:|:----------------------------:|
 |Exp-01| LunarLander-v2   |  5e5   |   0.0003 / 0.0003  | 0.005 |         1         |    1000     | 500      |      104877<sup>1</sup>       | 
-|Exp-02| LunarLander-v2   |  5e5   |   0.0005 / 0.0003  | 0.01  |         0.5       |    1000     | 500      |      11323<sup>1</sup>         |
+|Exp-02| LunarLander-v2   |  5e5   |   0.0005 / 0.0003  | 0.01  |         0.5       |    1000     | 500      |      111323<sup>1</sup>         |
 |Exp-03| LunarLander-v2   |  5e5   |   0.0005 / 0.0003  | 0.05  |         1         |    1000     | 500      |      82458<sup>1</sup>         |
 |Exp-04| BipedalWalker-v3 |  5e5   |   0.0001 / 0.0001  | 0.01  |         1         |    1000     | 600      |       348007                   | 
 |Exp-05| BipedalWalker-v3 |  1e5   |   0.0001/ 0.00005  | 0.01  |         1         |    1000     | 500      |            364085              |
 |Exp-06| BipedalWalker-v3 |  5e5   |   0.0001/ 0.0002   | 0.05  |         1         |    1000     | 700      |        455524<sup>2</sup>     |
 
-<sup>1</sup> Solve the environment in the learning steps
+<sup>1</sup> Solve the environment in the learning steps.
 
-<sup>2</sup> Solved the envriroment  with a total of 617406 steps
+<sup>2</sup> Solved the envriroment with steps to learn from a total of 617406 steps.
 
 
 <img src="results/lunar/sum of rewards per episode_500_0.0003.png" alt="exp_01" width="325"/>__A__<img src="results/lunar02/sum of rewards per episode_500_0.0003.png" alt="exp_02" width="325"/>__B__<img src="results/lunar03/sum of rewards per episode_500_0.0005.png" alt="exp_03" width="325"/>__C__
