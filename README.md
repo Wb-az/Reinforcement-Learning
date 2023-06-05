@@ -141,7 +141,7 @@ Table 1. Training results of the continuos gym environments Lunar-Lander-v2 and 
 with the Soft Actor-Critic algorithm. The actor and critics had three hidden layers with 256 
 hidden units. The batch size was set to 256.
 
-|Exp   | Environment	    | Memory | Learning rate	<br> actor / critic|  tau  | reward <br> scale | Exploration |  Epochs  | steps<br> to learn |
+|Exp   | Environment	    | Memory | Learning rate	<br> actor / critic|  tau  | reward <br> scale | Exploration |  Episodes  | steps<br> to learn |
 |:----:|:-----------------|:------:|:------------------:|:-----:|:-----------------:|:-----------:|:--------:|:----------------------------:|
 |Exp-01| LunarLander-v2   |  5e5   |   0.0003 / 0.0003  | 0.005 |         1         |    1000     | 500      |      104877<sup>1</sup>       | 
 |Exp-02| LunarLander-v2   |  5e5   |   0.0005 / 0.0003  | 0.01  |         0.5       |    1000     | 500      |      111323<sup>1</sup>         |
